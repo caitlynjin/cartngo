@@ -1,16 +1,19 @@
-import { List } from 'antd'
 import './App.css'
 import Product from './components/Product'
+import { Flex } from "antd";
 
 function App() {
   return (
-  <List>
-    <Product />
-    <Product />
-    <Product />
-    <Product />
-    <Product />
-  </List>
+    <Flex wrap="wrap" justify="space-evenly">
+      <Product />
+      <Product />
+      <Product />
+      <Product />
+      <Product />
+      <Product />
+      <Product />
+      <Product />
+    </Flex>
   )
 }
 
