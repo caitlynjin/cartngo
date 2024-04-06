@@ -42,7 +42,7 @@
 }
 
 .product {
-  line-height: 6px;
   text-align: left;
-  padding: 12px;
+  padding: 16px;
+  max-width: 200px;
 }

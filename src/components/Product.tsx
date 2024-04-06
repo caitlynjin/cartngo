@@ -1,17 +1,36 @@
-import React from 'react'
-import thumbnail from '../assets/airpods.png'
-import '../App.css'
-import { Rate } from 'antd';
+import "../App.css";
+import { Rate } from "antd";
 
-const Product = () => {
-  return (
-    <div className="product">
-      <img src={thumbnail} alt="image" style={{ maxWidth: 200, maxHeight: 200 }}/>
-      <h3>iPhone 9</h3>
-      <h4>$549</h4>
-      <Rate allowHalf disabled defaultValue={2.5} style={{ fontSize: 16 }} />
-    </div>
-  )
+interface Props {
+  price: number;
+  rating: number;
+  thumbnail: string;
+  title: string;
 }
 
-export default Product
+const Product = ({ price, rating, thumbnail, title }: Props) => {
+  return (
+    <div className="product">
+      <div
+        style={{
+          backgroundColor: "#F2F2F2",
+          height: 200,
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <img
+          src={thumbnail}
+          alt="image"
+          style={{ maxWidth: 188, maxHeight: 188, padding: 16 }}
+        />
+      </div>
+      <h3 style={{ marginTop: 4, marginBottom: 0 }}>{title}</h3>
+      <h4 style={{ marginTop: 0, marginBottom: 0,  color: "#52AB98" }}>${price}</h4>
+      <Rate allowHalf disabled defaultValue={rating} style={{ fontSize: 16 }} />
+    </div>
+  );
+};
+
+export default Product;

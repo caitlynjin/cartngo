@@ -36,6 +36,12 @@ h1 {
   line-height: 1.1;
 }
 
+h3 {
+  white-space: nowrap;
+  overflow: clip;
+  text-overflow: ellipsis;
+}
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
